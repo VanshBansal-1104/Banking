@@ -1,0 +1,114 @@
+:root {
+  --primary: #28a745;
+  --primary-dark: #218838;
+  --danger: #dc3545;
+  --danger-dark: #c82333;
+  --light: #ffffff;
+  --background: #f0f2f5;
+  --text-dark: #212529;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.bank-container {
+  background-color: var(--light);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.balance-box {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  background: #e9ecef;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.balance-title {
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.balance-amount {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  margin-top: 0.5rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+button {
+  flex: 1 1 48%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--radius);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.deposit {
+  background-color: var(--primary);
+}
+
+.deposit:hover {
+  background-color: var(--primary-dark);
+}
+
+.withdraw {
+  background-color: var(--danger);
+}
+
+.withdraw:hover {
+  background-color: var(--danger-dark);
+}
+
+@media (max-width: 480px) {
+  .button-group {
+    flex-direction: column;
+  }
+
+  button {
+    flex: 1 1 100%;
+  }
+}
